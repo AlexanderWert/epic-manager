@@ -1,0 +1,15 @@
+name: GitHub Epic Manager 
+description: Automatically syncs body and state of an epic issue with sub issue states.
+inputs:
+  github-token:
+    description: GitHub token secret to be used. This token requires access to the target repository of the epic issues. 
+    required: true
+  config-path:
+    description: The relative path to the action config YAML file.
+    required: true
+runs:
+  using: node12
+  main: dist/index.js
+branding:
+  icon: book-open
+  color: purple
